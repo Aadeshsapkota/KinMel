@@ -1,0 +1,20 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: ecommerce-sql
+    platform: linux/amd64 
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: "Ecommerce@1234"
+      MSSQL_TELEMETRY_ENABLED: FALSE  
+      MSSQL_USER_EXTENSIONS_ENABLED: FALSE   
+    ports:
+      - "1434:1433"
+
+    volumes:
+      - ecommerce_sql_data:/var/opt/mssql
+
+    restart: unless-stopped
+
+volumes:
+  ecommerce_sql_data:

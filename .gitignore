@@ -1,0 +1,24 @@
+# Node
+node_modules/
+dist/
+
+# .NET / C#
+[Bb]in/
+[Oo]bj/
+appsettings.Development.json
+
+# .NET configuration files containing secrets
+**/appsettings.json
+**/appsettings.*.json
+
+# Keep the template/example configuration if you want
+!**/appsettings.example.json
+# IDEs
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Secrets
+.env
+.env.*

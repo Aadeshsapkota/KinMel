@@ -1,0 +1,38 @@
+using System.Text.Json;
+using ECommerce.API.Common;
+
+namespace ECommerce.API.Middleware;
+
+public class ExceptionMiddleware
+{
+    private readonly RequestDelegate _next;
+
+    public ExceptionMiddleware(RequestDelegate next)
+    {
+        _next = next;
+    }
+
+    public async Task InvokeAsync(HttpContext context)
+    {
+        try
+        {
+            await _next(context);
+        }
+        catch (Exception ex)
+        {
+            context.Response.ContentType = "application/json";
+            context.Response.StatusCode = 500;
+            Console.WriteLine("\n[ERROR] " + ex.ToString() + "\n");
+
+            var response = new ApiResponse<object>
+            {
+                Success = false,
+                Message = ex.Message,
+                Data = null
+            };
+
+            await context.Response.WriteAsync(
+                JsonSerializer.Serialize(response));
+        }
+    }
+}
