@@ -1,9 +1,9 @@
-# Velocity.Shop
+# Kinmel
 
 A modern full-stack eCommerce platform built with React, TypeScript, ASP.NET Core, Entity Framework Core, and PostgreSQL.
 
-Velocity.Shop provides a complete online shopping experience with product browsing, cart management, order processing, user authentication, and an administrative dashboard for managing products, categories, users, and orders.
-edited readme
+Kinmel provides a complete online shopping experience with product browsing, cart management, order processing, user authentication, and an administrative dashboard for managing products, categories, users, and orders.
+
 ---
 
 ## Features
@@ -63,6 +63,7 @@ edited readme
 
 ```text
 frontend/
+
 ├── src/
 │   ├── components/
 │   ├── pages/
@@ -72,6 +73,7 @@ frontend/
 │   └── api/
 
 backend/
+
 ├── ECommerce.API/
 │   ├── Controllers/
 │   ├── Services/
@@ -84,7 +86,6 @@ backend/
 ---
 
 ## Screenshots
-
 
 ### Home Page
 
@@ -105,9 +106,9 @@ backend/
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/velocity-shop.git
+git clone https://github.com/yourusername/kinmel.git
 
-cd velocity-shop
+cd kinmel
 ```
 
 ---
@@ -206,7 +207,7 @@ Update:
 
 ## Authentication
 
-Velocity.Shop uses JWT authentication.
+Kinmel uses JWT authentication.
 
 After successful login:
 
@@ -228,8 +229,6 @@ After successful login:
 * Email notifications
 * Global search
 * Advanced filtering and sorting
-
----
 
 ---
 
